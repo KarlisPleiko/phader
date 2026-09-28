@@ -1,0 +1,12 @@
+"Unique peptides"  5       
+ "Total peptides"   7       
+ 
+"Total unique peptides:" 5
+"Sum total peptides:" 7
+"Peptides"	 "synthetic_demo"	 
+ CSPWNRGVC          3       
+ CKEFTYHAC          1       
+ CQQWNRGVC          1       
+ CSPNRGVC           1       
+ CPPWNRGVC          1       
+ 

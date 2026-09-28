@@ -1,0 +1,4 @@
+# phader runtime requirements.
+# The counting engine (peptide_parser.py) uses only the Python standard library;
+# Streamlit is needed for the graphical interface only.
+streamlit>=1.28,<2

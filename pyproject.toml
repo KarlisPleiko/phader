@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "phader"
+version = "1.0.0"
+description = "Count peptide inserts in T7 phage display sequencing reads (FASTQ/FASTA)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Karlis Pleiko" }]
+keywords = [
+    "phage display",
+    "T7 phage",
+    "biopanning",
+    "peptide library",
+    "FASTQ",
+    "next-generation sequencing",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = ["streamlit>=1.28,<2"]
+
+[project.urls]
+Homepage = "https://github.com/KarlisPleiko/phader"
+Issues = "https://github.com/KarlisPleiko/phader/issues"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["peptide_parser.py", "streamlit_app.py"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "peptide_parser.py",
+    "streamlit_app.py",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "KNOWN_ISSUES.md",
+    "requirements.txt",
+    "docs",
+]

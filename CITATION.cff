@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "phader: peptide insert counting for T7 phage display sequencing data"
+message: "If you use this software, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Pleiko
+    given-names: Karlis
+    orcid: "https://orcid.org/0000-0002-1073-197X"
+repository-code: "https://github.com/KarlisPleiko/phader"
+url: "https://github.com/KarlisPleiko/phader"
+abstract: >-
+  phader counts peptide inserts in next-generation sequencing reads from T7 phage
+  display biopanning experiments. Reads are translated in all six frames, anchored on
+  the constant leader sequence immediately upstream of the variable insert, and filtered
+  by library scaffold (CX4C, CX7C, CX8C, CX10C, generic C...C, or an X7-TEV-His6
+  cassette), read quality, NNK codon compatibility and optional peptide allow/deny lists.
+  Identical peptides are tallied per input file and reported as a ranked count table,
+  optionally with the underlying DNA variants clustered by a weighted edit distance to
+  collapse sequencing errors. A Streamlit interface runs the analysis over a local
+  directory of FASTQ/FASTA files without uploading them.
+keywords:
+  - phage display
+  - T7 phage
+  - biopanning
+  - peptide library
+  - next-generation sequencing
+  - FASTQ
+license: MIT
+version: 1.0.0
+# date-released: YYYY-MM-DD   # fill in when you cut the v1.0.0 GitHub release
+# doi: 10.5281/zenodo.XXXXXXX # fill in with the Zenodo DOI minted from that release

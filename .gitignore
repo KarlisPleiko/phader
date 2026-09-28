@@ -1,0 +1,43 @@
+# --- sequencing data and results: never commit these ---
+data/
+results/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.fa
+*.fasta
+*.sam
+*.bam
+*_results.txt
+all_results.zip
+
+# ...but the tiny synthetic example is part of the repository
+!examples/synthetic_demo.fastq
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# --- environments ---
+.venv/
+venv/
+env/
+.python-version
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
+# --- tooling / editors ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.idea/
+.vscode/
+
+# --- macOS ---
+.DS_Store

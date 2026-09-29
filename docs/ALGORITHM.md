@@ -89,10 +89,12 @@ into their parent sequence:
 1. Variants of the listed peptides that exceed 200 copies become reference sequences.
 2. Every other variant, processed from most to least abundant, is compared against all
    reference sequences that are more than 200x more abundant than itself.
-3. Distance is a modified edit distance: substitutions cost 1, insertions and deletions cost
-   1.9, and runs of consecutive matching positions reduce the score. The asymmetric penalties
-   favour merging variants that differ by substitutions — the dominant Illumina error mode —
-   over variants that differ in length.
+3. Distance is a modified edit distance: substitutions cost 1.9, insertions and deletions
+   cost 1, and runs of consecutive matching positions reduce the score. The weighting
+   therefore prefers to explain a difference between two variants as an indel rather than
+   as a substitution. This is an unusual choice for Illumina data, where substitution
+   errors dominate, and it is reported here as the behaviour of the code rather than as a
+   recommendation.
 4. A variant within *Etalon DNA edit distance cutoff* of its closest reference is merged into
    it; otherwise it becomes a reference itself once it exceeds 200 copies.
 
